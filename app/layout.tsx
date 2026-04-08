@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Technical Advisor, Data Engineer, and Full-Stack Developer based in Rochester, MN.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.ico",
   },
 };
 
