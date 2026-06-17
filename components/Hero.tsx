@@ -44,8 +44,9 @@ export default function Hero() {
         lineHeight: 1.7,
         marginBottom: "40px",
       }}>
-        I build data pipelines, backend systems, and interfaces — currently deep in Rust,
-        PostgreSQL, and AI-assisted data workflows at CooksAtlas.
+        I build data pipelines, backend systems, and interfaces that make complex data
+        usable. My most recent role was 3+ years at an early-stage food-tech startup,
+        working in Rust, PostgreSQL, and LLM-assisted data workflows.
       </p>
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
         <a

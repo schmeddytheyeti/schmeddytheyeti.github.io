@@ -7,7 +7,7 @@ const C = {
 };
 
 const stats = [
-  { label: "Current Role", value: "Technical Advisor, CooksAtlas" },
+  { label: "Most Recent Role", value: "Technical Advisor, Food-Tech Startup" },
   { label: "Location", value: "Rochester, MN" },
   { label: "Experience", value: "3+ years" },
   { label: "Focus", value: "Rust · Python · TypeScript" },
@@ -32,7 +32,7 @@ export default function About() {
       <div className="grid-2col">
         <div style={{ fontSize: "14px", color: C.textSecondary, lineHeight: 1.75, display: "flex", flexDirection: "column", gap: "16px" }}>
           <p>
-            I'm a self-taught engineer operating as a generalist at a food-tech startup — doing the work of a{" "}
+            I'm a self-taught engineer who spent 3+ years as a generalist at an early-stage food-tech startup — doing the work of a{" "}
             <span style={{ color: C.textPrimary }}>data engineer, backend developer, and frontend developer</span>
             {" "}on a small team where wearing many hats is the job.
           </p>
@@ -41,7 +41,7 @@ export default function About() {
             complicated things feel effortless. I bring that same instinct to engineering.
           </p>
           <p>
-            Currently building ingredient data infrastructure in{" "}
+            Most recently, I built ingredient data infrastructure in{" "}
             <span style={{ color: C.textPrimary }}>Rust + PostgreSQL</span>
             {" "}and LLM-assisted pipelines using the Anthropic API.
           </p>

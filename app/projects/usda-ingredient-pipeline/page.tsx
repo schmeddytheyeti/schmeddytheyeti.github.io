@@ -181,7 +181,7 @@ export default function USDAIngredientPipeline() {
             and dozens of near-duplicate entries at varying levels of specificity.
           </p>
           <p>
-            CooksAtlas needed a clean, categorized ingredient database for{" "}
+            The startup needed a clean, categorized ingredient database for{" "}
             <span style={{ color: C.textPrimary }}>recipe matching, nutrition display, and dietary restriction filtering</span>.
             No off-the-shelf dataset matched the shape we needed, and manual curation at this scale would
             have taken weeks and introduced inconsistencies.
