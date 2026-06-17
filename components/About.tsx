@@ -3,30 +3,33 @@ const C = {
   accent: "#51C9DB",
   textPrimary: "#e8e8e8",
   textSecondary: "#888888",
-  textMuted: "#555555",
+  textMuted: "#7a7a7a",
 };
 
 const stats = [
   { label: "Current Role", value: "Technical Advisor, CooksAtlas" },
   { label: "Location", value: "Rochester, MN" },
   { label: "Experience", value: "3+ years" },
-  { label: "Focus", value: "Rust · Python · React" },
+  { label: "Focus", value: "Rust · Python · TypeScript" },
   { label: "Background", value: "Biotechnology · Bartending" },
+  { label: "SQL Cert", value: "TestDome Gold · Top 10% Globally" },
+  { label: "Rust Book", value: "Brown Univ. Interactive Edition" },
 ];
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: "64px 40px", borderBottom: `1px solid ${C.border}` }}>
-      <p style={{
+    <section id="about" className="section" style={{ borderBottom: `1px solid ${C.border}` }}>
+      <h2 style={{
         fontSize: "11px",
         color: C.accent,
         letterSpacing: "0.15em",
         textTransform: "uppercase",
         marginBottom: "32px",
+        fontWeight: 400,
       }}>
         About
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "start" }}>
+      </h2>
+      <div className="grid-2col">
         <div style={{ fontSize: "14px", color: C.textSecondary, lineHeight: 1.75, display: "flex", flexDirection: "column", gap: "16px" }}>
           <p>
             I'm a self-taught engineer operating as a generalist at a food-tech startup — doing the work of a{" "}
@@ -54,10 +57,11 @@ export default function About() {
                 padding: "14px 0",
                 borderTop: i === 0 ? `1px solid ${C.border}` : undefined,
                 borderBottom: `1px solid ${C.border}`,
+                gap: "16px",
               }}
             >
-              <span style={{ fontSize: "12px", color: C.textMuted }}>{label}</span>
-              <span style={{ fontSize: "12px", color: C.textPrimary, fontWeight: 500 }}>{value}</span>
+              <span style={{ fontSize: "12px", color: C.textMuted, flexShrink: 0 }}>{label}</span>
+              <span style={{ fontSize: "12px", color: C.textPrimary, fontWeight: 500, textAlign: "right" }}>{value}</span>
             </div>
           ))}
         </div>

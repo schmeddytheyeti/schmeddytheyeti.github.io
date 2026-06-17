@@ -1,9 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background-color: #0e0e0e; color: #e8e8e8; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+body { background-color: #0e0e0e; color: #e8e8e8; font-family: var(--font-inter), system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 ::selection { background: #51C9DB33; color: #51C9DB; }
+
+/* Focus styles — WCAG 2.1 AA */
+*:focus-visible {
+  outline: 2px solid #51C9DB;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+*:focus:not(:focus-visible) { outline: none; }
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: #51C9DB;
+  color: #0e0e0e;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0 0 6px 6px;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus { top: 0; }
+
+/* Responsive section padding */
+.section { padding: 64px 40px; }
+.section--hero { padding: 96px 40px; }
+
+/* Responsive grid layouts */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+/* Hero heading — responsive font size */
+.hero-h1 {
+  font-size: clamp(40px, 9vw, 64px);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+  .section { padding: 48px 20px; }
+  .section--hero { padding: 64px 20px; }
+  .grid-2col { grid-template-columns: 1fr; gap: 32px; }
+  .grid-cards { grid-template-columns: 1fr; }
+  .grid-3col { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .grid-3col { grid-template-columns: 1fr 1fr; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}

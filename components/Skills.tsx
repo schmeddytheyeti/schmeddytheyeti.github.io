@@ -12,17 +12,18 @@ const groups = [
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ padding: "64px 40px", borderBottom: `1px solid ${C.border}` }}>
-      <p style={{
+    <section id="skills" className="section" style={{ borderBottom: `1px solid ${C.border}` }}>
+      <h2 style={{
         fontSize: "11px",
         color: C.accent,
         letterSpacing: "0.15em",
         textTransform: "uppercase",
         marginBottom: "32px",
+        fontWeight: 400,
       }}>
         Skills
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "32px" }}>
+      </h2>
+      <div className="grid-3col">
         {groups.map((g) => (
           <div key={g.title}>
             <p style={{

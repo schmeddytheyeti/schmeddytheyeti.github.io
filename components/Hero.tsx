@@ -8,7 +8,7 @@ const C = {
   accent: "#51C9DB",
   textPrimary: "#e8e8e8",
   textSecondary: "#888888",
-  textMuted: "#555555",
+  textMuted: "#7a7a7a",
 };
 
 export default function Hero() {
@@ -16,7 +16,11 @@ export default function Hero() {
   const [secondaryHovered, setSecondaryHovered] = useState(false);
 
   return (
-    <section style={{ padding: "96px 40px", borderBottom: `1px solid ${C.border}` }}>
+    <section
+      id="main-content"
+      className="section--hero"
+      style={{ borderBottom: `1px solid ${C.border}` }}
+    >
       <p style={{
         fontSize: "11px",
         color: C.accent,
@@ -24,15 +28,9 @@ export default function Hero() {
         textTransform: "uppercase",
         marginBottom: "20px",
       }}>
-        Available for opportunities
+        Open to new opportunities · Remote or Rochester, MN
       </p>
-      <h1 style={{
-        fontSize: "64px",
-        fontWeight: 500,
-        color: "#fff",
-        lineHeight: 1.1,
-        marginBottom: "16px",
-      }}>
+      <h1 className="hero-h1">
         Sam<br />Schmaedeka
       </h1>
       <p style={{ fontSize: "18px", color: C.textSecondary, marginBottom: "32px" }}>
@@ -49,7 +47,7 @@ export default function Hero() {
         I build data pipelines, backend systems, and interfaces — currently deep in Rust,
         PostgreSQL, and AI-assisted data workflows at CooksAtlas.
       </p>
-      <div style={{ display: "flex", gap: "12px" }}>
+      <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
         <a
           href="#projects"
           onMouseEnter={() => setPrimaryHovered(true)}
@@ -71,6 +69,8 @@ export default function Hero() {
         <a
           href="/Sam_Schmaedeka_Resume.pdf"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download resume (opens PDF in new tab)"
           onMouseEnter={() => setSecondaryHovered(true)}
           onMouseLeave={() => setSecondaryHovered(false)}
           style={{
