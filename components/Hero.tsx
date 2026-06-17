@@ -68,7 +68,7 @@ export default function Hero() {
           View Projects
         </a>
         <a
-          href="/Sam_Schmaedeka_Resume.pdf"
+          href="/Sam_Schmaedeka_Technical_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download resume (opens PDF in new tab)"
